@@ -22,6 +22,6 @@ RUN apt-get update -qq && apt-get install -y \
 	python-xdg \
 	python-yapsy
 
-RUN easy_install -U six
+RUN easy_install -U six pytest pytest-cov
 
 RUN apt-get clean
