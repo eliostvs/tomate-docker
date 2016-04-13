@@ -25,3 +25,6 @@ RUN apt-get update -qq && apt-get install -y \
 RUN easy_install -U six pytest pytest-cov pytest-flake8
 
 RUN apt-get clean
+
+ENTRYPOINT ["make"]
+CMD ["test"]
