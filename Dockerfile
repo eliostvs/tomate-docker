@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt-get update -qq && install -y -qq wget
+RUN apt-get update -qq && apt-get install -y wget
 
 RUN wget -O- http://download.opensuse.org/repositories/home:/eliostvs:/tomate/xUbuntu_14.04/Release.key | apt-key add -
 RUN echo 'deb http://download.opensuse.org/repositories/home:/eliostvs:/tomate/xUbuntu_14.04/ ./' > /etc/apt/sources.list.d/tomate.list
