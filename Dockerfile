@@ -20,7 +20,8 @@ RUN apt-get update -qq && apt-get install -y \
 	python-wiring \
 	python-wrapt \
 	python-xdg \
-	python-yapsy
+	python-yapsy \
+	python-venusian
 
 RUN easy_install -U six pytest pytest-cov pytest-flake8
 
