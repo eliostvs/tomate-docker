@@ -19,11 +19,12 @@ RUN apt-get update -qq && apt-get install -y \
 	python3-wrapt \
 	python3-xdg \
 	python3-yapsy \
+	python3-pip \
 	python3-pytest \
 	python3-pytest-cov \
 	python3-venusian
 
-RUN easy_install -U pytest-flake8
+RUN pip3 install pytest-flake8
 
 RUN apt-get clean
 
