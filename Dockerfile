@@ -18,14 +18,10 @@ RUN apt-get update -qq && apt-get install -y \
     make \
     notify-osd \
     python3-blinker \
-    python3-coverage \
     python3-dbus \
-    python3-flake8 \
     python3-gi \
     python3-mock \
     python3-pip \
-    python3-pytest \
-    python3-pytest-cov \
     python3-setuptools \
     python3-six \
     python3-venusian \
@@ -36,6 +32,8 @@ RUN apt-get update -qq && apt-get install -y \
     xvfb
 
 RUN apt-get clean
+
+RUN pip3 install pytest pytest-cov pytest-flake8
 
 ENTRYPOINT ["make"]
 CMD ["test"]
