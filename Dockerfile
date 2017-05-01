@@ -20,6 +20,7 @@ RUN apt-get update -qq && apt-get install -y \
     python3-blinker \
     python3-coverage \
     python3-dbus \
+    python3-flake8 \
     python3-gi \
     python3-mock \
     python3-pip \
@@ -33,8 +34,6 @@ RUN apt-get update -qq && apt-get install -y \
     python3-xdg \
     python3-yapsy \
     xvfb
-
-RUN pip3 install pytest-flake8
 
 RUN apt-get clean
 
