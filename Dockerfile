@@ -22,6 +22,7 @@ RUN apt-get update -qq && apt-get install -y \
     python3-gi \
     python3-mock \
     python3-pip \
+    python3-pytest-mock \
     python3-setuptools \
     python3-six \
     python3-venusian \
