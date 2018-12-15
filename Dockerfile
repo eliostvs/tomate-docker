@@ -1,9 +1,9 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update -qq && apt-get install -y wget
 
-RUN wget -O- http://download.opensuse.org/repositories/home:/eliostvs:/tomate/xUbuntu_16.04/Release.key | apt-key add -
-RUN echo 'deb http://download.opensuse.org/repositories/home:/eliostvs:/tomate/xUbuntu_16.04/ ./' > /etc/apt/sources.list.d/tomate.list
+RUN wget -O- http://download.opensuse.org/repositories/home:/eliostvs:/tomate/xUbuntu_18.04/Release.key | apt-key add -
+RUN echo 'deb http://download.opensuse.org/repositories/home:/eliostvs:/tomate/xUbuntu_18.04/ ./' > /etc/apt/sources.list.d/tomate.list
 
 RUN apt-get update -qq && apt-get install -y \
     dbus-x11 \
