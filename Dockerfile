@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN apt-get update -qq && apt-get install -y \
     dbus-x11 \
@@ -14,6 +14,7 @@ RUN apt-get update -qq && apt-get install -y \
     notify-osd \
     python3-blinker \
     python3-dbus \
+    python3-dbusmock \
     python3-gi \
     python3-mock \
     python3-pip \
@@ -25,7 +26,7 @@ RUN apt-get update -qq && apt-get install -y \
     python3-yapsy \
     xvfb
 
-RUN pip3 install pytest pytest-cov pytest-flake8 pytest-mock pytest-describe wiring
+RUN pip3 install pytest pytest-cov pytest-flake8 pytest-mock wiring
 
 ENTRYPOINT ["make"]
 
