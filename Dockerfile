@@ -1,5 +1,7 @@
 FROM ubuntu:20.04
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update -qq && apt-get install -y \
     dbus-x11 \
     gir1.2-appindicator3-0.1 \
