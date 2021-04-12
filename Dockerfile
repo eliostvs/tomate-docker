@@ -14,7 +14,7 @@ RUN apt-get update -qq && apt-get install -y \
     gir1.2-unity-5.0 \
     gstreamer1.0-plugins-base \
     make \
-    notify-osd \
+    notification-daemon \
     python3-blinker \
     python3-dbus \
     python3-dbusmock \
