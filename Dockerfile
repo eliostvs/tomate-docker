@@ -19,10 +19,7 @@ RUN apt-get update -qq && apt-get install -y \
     python3-dbus \
     python3-dbusmock \
     python3-gi \
-    python3-mock \
     python3-pip \
-    python3-setuptools \
-    python3-six \
     python3-venusian \
     python3-wrapt \
     python3-xdg \
