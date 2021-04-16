@@ -28,6 +28,8 @@ RUN apt-get update -qq && apt-get install -y \
 
 RUN pip3 install pytest pytest-cov pytest-flake8 pytest-mock wiring
 
+WORKDIR /code
+
 ENTRYPOINT ["make"]
 
 CMD ["test"]
