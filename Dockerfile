@@ -20,13 +20,21 @@ RUN apt-get update -qq && apt-get install -y \
     python3-dbusmock \
     python3-gi \
     python3-pip \
+    python3-pytest \
+    python3-pytest-cov \
+    python3-pytest-flake8 \
+    python3-pytest-mock \
     python3-venusian \
+    python3-wiring \
     python3-wrapt \
     python3-xdg \
     python3-yapsy \
     xvfb
 
-RUN pip3 install pytest pytest-cov pytest-flake8 pytest-mock wiring
+RUN pip3 install \
+    black \
+    isort \
+    ruff 
 
 WORKDIR /code
 
