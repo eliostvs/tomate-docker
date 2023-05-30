@@ -12,6 +12,7 @@ RUN apt-get update -qq && apt-get install -y \
     gir1.2-gtk-3.0 \
     gir1.2-notify-0.7 \
     gir1.2-unity-5.0 \
+    git \
     gstreamer1.0-plugins-base \
     make \
     notification-daemon \
@@ -25,7 +26,6 @@ RUN apt-get update -qq && apt-get install -y \
     python3-pytest-flake8 \
     python3-pytest-mock \
     python3-venusian \
-    python3-wiring \
     python3-wrapt \
     python3-xdg \
     python3-yapsy \
@@ -34,7 +34,8 @@ RUN apt-get update -qq && apt-get install -y \
 RUN pip3 install \
     black \
     isort \
-    ruff 
+    ruff \
+    git+https://git@github.com/eliostvs/wiring.git@master
 
 WORKDIR /code
 
